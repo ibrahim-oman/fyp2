@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="css/reset.css"> 
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/text.css">
+
+<meta charset="UTF-8">
+<script>
+    function open_dialog(){
+        var filebox=document.getElementById("uploaded_file");
+        var txt_path=document.getElementById("txt_file_path");
+        filebox.click();
+        txt_path.value=filebox.value;
+    }
+    </script>
+<title>FYLES SYNCORNZIATION SYSTEM</title>
+</head>
+
+<body>
+
+<div class="container_12">
+<div class="ian">
+<div class="grid_12 HeaderTap ">
+	<ul>
+    <li id="li_1">Files Upload</li>
+    <li id="li_2">Synchronize Teaching Materials System</li>
+    </ul>
+</div>
+<div class="grid_12 BlueTap">
+		<div class="BrowseFilesBox">
+            <a href="list_files.php" >Browse Files</a>
+        </div>
+		<div class="FilesUploadBox">
+            <a href="index.html" >Upload Files</a>
+        </div>
+</div>
+
+<div class="grid_12 underTap "></div>
+
+<div class="grid_12 BudyContainer">
+</br></br></br></br>
+
+<div class="FormBox grid_2 prefix_3  ">
+
+<form action="add_file.php" method="post" enctype="multipart/form-data">
+
+        <!--<input name="uploaded_file" type="file"  id="uploaded_file" >-->
+
+
+<input type="file"name="uploaded_file"id="uploaded_file"style="display:none"/>
+<input type="text"id="txt_file_path"/>
+<input type="button" onclick="open_dialog();"value="Add File" class="button"/>
+<input type="submit" value="Upload">
+</form>
+    
+
+
+</div><!-- end  <a href="list_files.php"> form-->
+
+
+
+</div><!-- BudyContainer-->
+</div> <!-- end ian-->
+
+
+
+</div><!-- end Container-->
+</body>
+</html>
+
+
